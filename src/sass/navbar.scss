@@ -1,0 +1,38 @@
+.nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   &__logo {
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--black);
+      letter-spacing: -1px;
+   }
+
+   &__list {
+      list-style: none;
+      display: flex;
+      gap: 1.3rem;
+      align-items: center;
+   }
+
+   &__item {
+      display: flex;
+      align-items: flex-end;
+
+      position: relative;
+
+      &>span {
+         font-family: var(--font-cabin);
+         position: absolute;
+         top: -6px;
+         right: -4px;
+         font-size: 1.1rem;
+         padding: 0 5px;
+         border-radius: 50%;
+         color: #fff;
+         background-color: #454545;
+      }
+   }
+}

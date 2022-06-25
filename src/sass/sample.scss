@@ -1,0 +1,83 @@
+.sample {
+   display: grid;
+   grid-template-columns: repeat(8, minmax(min-content, 1fr));
+   grid-gap: 3rem;
+   padding: 0 8rem;
+   margin-bottom: 8rem;
+
+   @media only screen and (max-width: 53em) {
+      padding: 0 4rem;
+   }
+
+   @media only screen and (max-width: 28em) {
+      padding: 0 3rem;
+   }
+
+   &__title {
+      grid-column: 1/-1;
+      font-family: 'Alata', sans-serif;
+      font-size: 3rem;
+      letter-spacing: -1px;
+
+      @media only screen and (max-width: 40.625em) {
+         font-size: 2.8rem;
+      }
+   }
+
+   &__image {
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 3;
+      width: 35rem;
+      aspect-ratio: 1;
+
+      @media only screen and (max-width: 46em) {
+         grid-column: 1 / -1;
+         width: 100%;
+      }
+
+      &>img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__name {
+      grid-column: 4 / -1;
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      @media only screen and (max-width: 46em) {
+         grid-column: 1 / span 6;
+         font-size: 2rem;
+      }
+
+      @media only screen and (max-width: 28em) {
+         letter-spacing: 0;
+         margin-bottom: 1rem;
+      }
+   }
+
+   &__description {
+      grid-column: 4 / -1;
+      color: var(--color-text-grey);
+      font-size: 1.8rem;
+
+      @media only screen and (max-width: 46em) {
+         grid-column: 1 / -1;
+      }
+   }
+
+   &__price {
+      font-family: var(--font-cabin);
+      font-size: 3rem;
+      letter-spacing: -1px;
+
+      @media only screen and (max-width: 46em) {
+         grid-column: 7 / -1;
+         justify-self: end;
+         font-size: 2.5rem;
+      }
+   }
+}

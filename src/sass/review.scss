@@ -1,0 +1,98 @@
+.review {
+   display: grid;
+   grid-gap: 3rem;
+
+   &>h2 {
+      margin: 0;
+   }
+
+   &__form {
+      display: flex;
+      gap: 3rem;
+
+      @media only screen and (max-width: 28em) {
+         gap: 1rem;
+      }
+   }
+
+   &__input {
+      font-size: 1.8rem;
+      width: 90%;
+   }
+
+   &__button {
+      background-color: var(--color-black);
+      color: #fff;
+      padding: 0.8rem 2.8rem;
+      font-size: 2rem;
+
+      @media only screen and (max-width: 28em) {
+         padding: 0.8rem 1.2rem;
+      }
+
+      @media only screen and (max-width: 23.75em) {
+         font-size: 1.8rem;
+      }
+
+      &:hover {
+         background-color: var(--dark-gray);
+      }
+   }
+
+   &__status {
+      font-size: 2.2rem;
+      letter-spacing: -1px;
+
+      &>a {
+         font-size: 2.5rem;
+         font-weight: 600;
+         padding: 1rem 2rem;
+         color: #161617;
+         transition: color 0.3s;
+
+         &:hover {
+            color: var(--dark-gray);
+         }
+      }
+   }
+
+   &__list {
+      display: grid;
+      grid-gap: 4rem;
+      padding: 2rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+   }
+
+   &__item {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      color: var(--light-gray);
+
+      @media only screen and (max-width: 28em) {
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   &__author {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--color-black);
+      margin-bottom: 1.3rem;
+   }
+
+   &__date {
+      font-family: var(--font-cabin);
+      padding: 0.5rem;
+      font-size: 1.1rem;
+   }
+
+   &__text {
+      grid-column: 1 / -1;
+      font-size: 1.8rem;
+
+      @media only screen and (max-width: 23em) {
+         font-size: 1.6rem;
+      }
+   }
+}

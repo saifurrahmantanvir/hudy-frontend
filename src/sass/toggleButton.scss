@@ -1,0 +1,31 @@
+.toggle-btn {
+   grid-column: 7 / 8;
+   grid-row: 2 / 3;
+
+   display: flex;
+
+   & svg {
+      height: auto;
+      width: auto;
+   }
+
+   @media only screen and (max-width: 46em) {
+      grid-column: 9 / -1;
+   }
+
+   @media only screen and (max-width: 31.25em) {
+      grid-column: 8 / -1;
+   }
+
+   &__left,
+   &__right {
+      flex: 0 0 50%;
+      background-color: var(--black);
+   }
+
+   &__left:hover,
+   &__right:hover {
+      background-color: var(--dark-gray);
+      cursor: pointer;
+   }
+}

@@ -1,0 +1,16 @@
+.product-img {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   z-index: 1;
+
+   @media only screen and (max-width: 53em) {
+      justify-content: center;
+   }
+
+   &>img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+   }
+}

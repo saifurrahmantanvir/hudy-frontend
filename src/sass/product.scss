@@ -1,0 +1,225 @@
+.product {
+   display: grid;
+   grid-template-columns: 0.8fr 1.2fr;
+   grid-template-rows: 62rem;
+   background: #fff;
+   overflow: hidden;
+
+   @media only screen and (max-width: 53em) {
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content;
+      grid-gap: 4rem;
+      padding: 4rem 6rem;
+   }
+
+   @media only screen and (max-width: 30em) {
+      padding: 3rem;
+   }
+
+   @media only screen and (max-width: 28em) {
+      padding-top: 2rem;
+   }
+
+   &__details {
+      overflow-y: scroll;
+
+      @media only screen and (max-width: 53em) {
+         height: max-content;
+         overflow: visible;
+      }
+
+      &::-webkit-scrollbar {
+         display: none;
+      }
+
+      &>div {
+         display: grid;
+         grid-gap: 4rem;
+         padding: 10rem;
+         padding-top: 2rem;
+
+         @media only screen and (max-width: 75em) {
+            padding-right: 7rem;
+            padding-left: 7rem;
+         }
+
+         @media only screen and (max-width: 53em) {
+            padding-right: 5rem;
+            padding-left: 5rem;
+            padding-bottom: 5rem;
+         }
+
+         @media only screen and (max-width: 53em) {
+            padding: 0;
+         }
+      }
+   }
+
+   &__title {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+
+      @media only screen and (max-width: 28em) {
+         font-size: 2.4rem;
+         letter-spacing: 0;
+      }
+   }
+
+   &__rating {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(3, min-content);
+      align-items: center;
+
+      &>.value {
+         font-family: var(--font-cabin);
+         color: var(--dark-gray);
+         font-size: 2.2rem;
+      }
+   }
+
+   &__cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      row-gap: 1.5rem;
+      align-items: center;
+
+      &>button:disabled {
+         background-color: var(--dark-gray);
+      }
+   }
+
+   &__price {
+      font-family: var(--font-cabin);
+      font-size: 3.8rem;
+      color: var(--dark-gray);
+      letter-spacing: -1px;
+   }
+
+   &__note {
+      flex: 0 0 100%;
+      font-size: 1.4rem;
+      color: var(--dark-gray);
+   }
+
+   &__description {
+      font-family: var(--font-jost);
+      font-size: 1.8rem;
+      color: var(--color-text-grey);
+   }
+
+   &__status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4rem;
+
+      @media only screen and (max-width: 28em) {
+         gap: 2rem;
+      }
+
+      &--instock {
+         display: flex;
+         gap: 2rem;
+         align-items: center;
+
+         &>.value {
+            font-family: var(--font-cabin);
+            font-size: 4rem;
+            color: var(--dark-gray);
+         }
+      }
+
+      &--size {
+         display: flex;
+         gap: 2rem;
+         align-items: center;
+      }
+   }
+
+   &__size {
+      font-family: var(--font-jost);
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+
+      &--active {
+         background-color: #454545;
+         color: #fff !important;
+         border: 1px solid #454545 !important;
+      }
+
+      &>li {
+         cursor: pointer;
+         border: 1px solid #000;
+         font-weight: 500;
+         padding: 0.8rem 1rem;
+      }
+   }
+
+
+   &__atc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+
+      @media only screen and (max-width: 23.75em) {
+         gap: 2rem;
+      }
+   }
+
+   &__quantity {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.4rem;
+
+      &>button {
+         display: flex;
+         padding: 1rem 1.4rem;
+         border: 1px solid #000;
+
+         &:hover {
+            background-color: var(--dark-gray);
+            border: 1px solid var(--dark-gray);
+
+            & svg path {
+               stroke: var(--background);
+            }
+         }
+
+         & svg {
+            height: 1.8rem;
+            width: 2rem;
+         }
+      }
+
+      &>input {
+         font-family: var(--font-cabin);
+         font-size: 1.8rem;
+         width: 6rem;
+         padding: 0.8rem 1.7rem;
+      }
+   }
+
+   &__loading {
+      display: grid;
+      grid-template-columns: minmax(min-content, 130rem);
+      min-height: 62rem;
+      background-color: #fff;
+      align-items: center;
+
+      @media only screen and (max-width: 53em) {
+         min-height: 100vh;
+      }
+
+      &>h3 {
+         text-align: center;
+         font-size: 2.4rem;
+         color: var(--dark-gray);
+         transform: translateY(-8rem);
+      }
+   }
+}

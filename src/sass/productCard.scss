@@ -1,0 +1,44 @@
+.card {
+   display: grid;
+   grid-template-rows: repeat(2, min-content);
+
+   &>figure {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+
+      &>img {
+         height: 100%;
+         width: 100%;
+         aspect-ratio: 1;
+         transform: scale(1);
+         transition: transform 0.12s ease;
+
+         &:hover {
+            transform: scale(1.08);
+         }
+      }
+   }
+
+   &__info {
+      padding: 1rem 0;
+
+      &>h6 {
+         font-size: 1.5rem;
+
+         @media only screen and (max-width: 23em) {
+            font-size: 1.3rem;
+         }
+      }
+
+      &>span {
+         font-family: var(--font-cabin);
+         color: var(--dark-gray);
+         letter-spacing: -1px;
+         font-size: 1.8rem;
+
+         @media only screen and (max-width: 23em) {
+            font-size: 1.5rem;
+         }
+      }
+   }
+}

@@ -1,0 +1,170 @@
+.admin {
+   display: grid;
+   grid-template-columns: minmax(min-content, 120rem);
+   background: #fff;
+
+   &__title {
+      font-family: 'Alata', sans-serif;
+      font-size: 3.5rem;
+      padding: 4rem 8rem;
+      letter-spacing: -1px;
+
+      @media only screen and (max-width: 53em) {
+         padding: 3rem 4rem;
+      }
+
+      @media only screen and (max-width: 28em) {
+         padding: 3rem;
+      }
+   }
+
+   &__form {
+      display: grid;
+      grid-template-columns: repeat(8, minmax(min-content, 1fr));
+      grid-gap: 3rem 4rem;
+      padding: 0 8rem;
+      margin-bottom: 8rem;
+
+      @media only screen and (max-width: 53em) {
+         grid-gap: 2.2rem;
+         padding: 0 4rem;
+      }
+
+      @media only screen and (max-width: 28em) {
+         padding: 0 3rem;
+         margin-bottom: 3rem;
+      }
+
+      &>input {
+         padding: 1.8rem 2rem;
+         width: 100%;
+
+         @media only screen and (max-width: 53em) {
+            padding: 1.5rem;
+            font-size: 1.8rem;
+         }
+      }
+
+      &>button {
+         grid-column: 8/-1;
+         font-size: 2.2rem;
+         font-weight: 500;
+         padding: 1rem 2rem;
+      }
+   }
+
+   &__name {
+      grid-column: 1 / span 4;
+
+      @media only screen and (max-width: 40.625em) {
+         grid-column: 1 / -1;
+      }
+   }
+
+   &__price {
+      grid-column: 5 / span 2;
+
+      @media only screen and (max-width: 40.625em) {
+         grid-column: 1 / span 4;
+      }
+   }
+
+   &__instock {
+      grid-column: 7 / -1;
+
+      @media only screen and (max-width: 40.625em) {
+         grid-column: 5 / -1;
+      }
+   }
+
+   &__brand {
+      grid-column: 5 / span 2;
+
+      @media only screen and (max-width: 40.625em) {
+         grid-column: 1 / span 4;
+      }
+   }
+
+   &__description {
+      grid-column: 1 / span 4;
+      grid-row: 2 / span 2;
+
+      @media only screen and (max-width: 40.625em) {
+         grid-column: 1 / -1;
+         grid-row: 3 / span 3;
+      }
+   }
+
+   &__size {
+      grid-column: 7 / -1;
+
+      @media only screen and (max-width: 40.625em) {
+         grid-column: 5 / -1;
+      }
+   }
+
+   &__tags {
+      grid-column: 5 / -1;
+
+      @media only screen and (max-width: 40.625em) {
+         grid-column: 1 / -1;
+      }
+   }
+
+   &__image {
+      grid-column: 1 / span 4;
+      padding: 1.2rem;
+      border: 1px solid #000;
+
+      @media only screen and (max-width: 40.625em) {
+         grid-column: 1 / span 6;
+      }
+
+      @media only screen and (max-width: 28em) {
+         grid-column: 1 / -1;
+      }
+
+      &>input {
+         width: 100%;
+
+         &::-webkit-file-upload-button {
+            font-family: inherit;
+         }
+      }
+   }
+
+   &__not {
+      min-height: 50rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+
+      @media only screen and (max-width:53em) {
+         min-height: 100vh;
+
+         &>* {
+            transform: translateY(-5rem);
+         }
+      }
+
+      &>h3 {
+         font-family: 'Alata', sans-serif;
+         text-align: center;
+         font-size: 2.4rem;
+         color: var(--dark-gray);
+      }
+
+      &>a {
+         font-size: 2.5rem;
+         font-weight: 600;
+         color: #161617;
+         transition: color 0.3s;
+
+         &:hover {
+            color: var(--dark-gray);
+         }
+      }
+   }
+}

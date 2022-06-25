@@ -1,0 +1,104 @@
+.hero {
+   grid-column: 1 / span 6;
+   grid-row: 1 / 3;
+   padding: 3rem 4rem;
+   background-color: #fff;
+
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+
+   &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: -5rem;
+      right: -20rem;
+      height: 20rem;
+      width: 20rem;
+      z-index: -1;
+      border-radius: 50%;
+      background-color: var(--dark-gray);
+      filter: blur(400px);
+   }
+
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: max-content 1fr;
+
+   @media only screen and (max-width: 46em) {
+      grid-column: 1 / -1;
+   }
+
+   @media only screen and (max-width: 31.25em) {
+      padding: 2rem;
+   }
+
+   &>nav {
+      align-self: normal;
+   }
+
+   &__heading {
+      align-self: center;
+      justify-self: center;
+
+      &>h1 {
+         font-family: 'Alata', sans-serif;
+         font-size: 3.5rem;
+         font-weight: 700;
+         letter-spacing: -1px;
+
+         @media only screen and (max-width: 62.5em) {
+            font-size: 2.5rem;
+         }
+      }
+
+      &>p {
+         font-size: 2rem;
+         margin: 1rem 0;
+         line-height: 1.6;
+         color: var(--light-gray);
+
+         @media only screen and (max-width: 62.5em) {
+            font-size: 1.8rem;
+         }
+      }
+   }
+
+   &__cta {
+      font-family: var(--font-jost);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+      color: var(--black);
+      display: flex;
+      gap: 3rem;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      @media only screen and (max-width: 62.5em) {
+         padding: 1rem 0;
+      }
+
+      &:hover {
+         color: var(--light-gray);
+      }
+
+      & svg {
+         height: 1.8rem;
+         width: 5rem;
+         transition: transform 0.3s;
+      }
+
+      &:hover svg {
+         transform: translateX(5px);
+      }
+
+      &:hover svg>path {
+         fill: var(--light-gray);
+      }
+   }
+}
