@@ -11,7 +11,7 @@ const Review = ({ reviews, id, slug }) => {
    const [review, setReview] = React.useState({})
    const [status, setStatus] = React.useState(initialStatus)
 
-   const { token } = JSON.parse(localStorage.getItem('persist:hudy/user'))
+   const localUser = JSON.parse(localStorage.getItem('persist:hudy/user'))
 
    const handleReview = async (e) => {
       e.preventDefault()
@@ -26,7 +26,7 @@ const Review = ({ reviews, id, slug }) => {
                method: 'POST',
                headers: {
                   'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${token}`
+                  'Authorization': `Bearer ${localUser?.token}`
                },
                body: JSON.stringify({
                   user: user._id,

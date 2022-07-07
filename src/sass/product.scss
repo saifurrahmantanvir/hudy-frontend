@@ -20,12 +20,20 @@
       padding-top: 2rem;
    }
 
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(min-content, 130rem);
+      justify-content: center;
+   }
+
    &__details {
       overflow-y: scroll;
+      position: relative;
 
       @media only screen and (max-width: 53em) {
          height: max-content;
          overflow: visible;
+         position: initial;
       }
 
       &::-webkit-scrollbar {
@@ -36,7 +44,7 @@
          display: grid;
          grid-gap: 4rem;
          padding: 10rem;
-         padding-top: 2rem;
+         padding-top: 3rem;
 
          @media only screen and (max-width: 75em) {
             padding-right: 7rem;

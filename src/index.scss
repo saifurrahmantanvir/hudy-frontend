@@ -35,7 +35,6 @@ html {
 }
 
 body {
-  // font-family: 'Jost', sans-serif;
   font-family: var(--font-alata);
   background-color: #e6e6e6;
   font-size: 1.6rem;
@@ -82,6 +81,7 @@ select {
 }
 
 textarea {
+  resize: vertical;
   letter-spacing: -1px;
   width: 100%;
   border: 1px solid var(--color-black);

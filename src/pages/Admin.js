@@ -8,8 +8,8 @@ import useUser from '../hooks/useUser'
 
 const initialFormData = {
    name: '',
-   price: 1,
-   inStock: 1,
+   price: '',
+   inStock: '',
    brand: '',
    size: [],
    tags: [],
@@ -19,7 +19,7 @@ const initialFormData = {
 const Admin = () => {
    const { user } = useUser()
 
-   const { token } = JSON.parse(localStorage.getItem('persist:hudy/user'))
+   const localUser = JSON.parse(localStorage.getItem('persist:hudy/user'))
 
    const [formData, setFormData] = React.useState({ ...initialFormData })
    const [product, setProduct] = React.useState({})
@@ -55,7 +55,7 @@ const Admin = () => {
             method: 'POST',
             url: 'https://hudy-tanvir.herokuapp.com/api/products',
             headers: {
-               'Authorization': `Bearer ${token}`
+               'Authorization': `Bearer ${localUser?.token}`
             },
             data: form
          })

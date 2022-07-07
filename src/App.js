@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.scss';
 
 import { Home, Admin, Login, NoMatch, Product, Products, Cart } from './pages'
-import { CartCancel, CartSuccess, PrivateRoute } from './components';
+import { CartCancel, CartSuccess } from './components';
 
 import store from './redux/store';
 import { getUser } from './redux/userSlice';
@@ -25,9 +25,10 @@ const AppWithContexts = () => {
                <Route path='/' element={<Home />} />
                <Route path='/login' element={<Login />} />
                <Route path='/admin' element={<Admin />} />
-               <Route path='/products' element={
+               {/* <Route path='/products' element={
                   <PrivateRoute><Products /></PrivateRoute>
-               } />
+               } /> */}
+               <Route path='/products' element={<Products />} />
                <Route path='/cart' element={<Cart />}>
                   <Route path='success' element={<CartSuccess />} />
                   <Route path='cancel' element={<CartCancel />} />

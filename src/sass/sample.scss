@@ -60,6 +60,7 @@
    }
 
    &__description {
+      font-family: var(--font-jost);
       grid-column: 4 / -1;
       color: var(--color-text-grey);
       font-size: 1.8rem;

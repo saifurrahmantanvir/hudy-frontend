@@ -5,7 +5,7 @@ import '../sass/navbar.scss'
 import { Cart, Hamburger } from '../icons'
 import { useSelector } from 'react-redux'
 
-const Navbar = () => {
+const Navbar = ({ handleToggle }) => {
    const { quantity } = useSelector((state) => state.cart)
 
    return (
@@ -18,7 +18,7 @@ const Navbar = () => {
                <span>{quantity}</span>
             </li>
             <li className='nav__item'>
-               <button><Hamburger /></button>
+               <button onClick={handleToggle}><Hamburger /></button>
             </li>
          </ul>
       </nav>

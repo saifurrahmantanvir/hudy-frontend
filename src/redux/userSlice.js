@@ -49,6 +49,10 @@ const userSlice = createSlice({
             state.loading = false
          }
       },
+      removeUser: (state) => {
+         state.isLoggedIn = false
+         state.user = {}
+      },
       setError: (state, action) => {
          state.loading = false
          state.error = action.payload
@@ -84,4 +88,4 @@ const userSlice = createSlice({
 })
 
 export default userSlice.reducer
-export const { getUser, setError } = userSlice.actions
+export const { getUser, removeUser, setError } = userSlice.actions

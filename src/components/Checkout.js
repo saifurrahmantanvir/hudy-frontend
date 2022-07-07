@@ -13,7 +13,7 @@ const Checkout = ({ total }) => {
    const { isLoggedIn } = useUser()
    const cart = useCart()
 
-   const { token } = JSON.parse(localStorage.getItem('persist:hudy/user'))
+   const localUser = JSON.parse(localStorage.getItem('persist:hudy/user'))
 
    const handleCheckout = async () => {
       try {
@@ -21,7 +21,7 @@ const Checkout = ({ total }) => {
             method: "POST",
             headers: {
                "Content-Type": "application/json",
-               'Authorization': `Bearer ${token}`
+               'Authorization': `Bearer ${localUser?.token}`
             },
             body: JSON.stringify({ cart })
          })
