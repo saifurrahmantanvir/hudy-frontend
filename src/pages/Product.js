@@ -27,9 +27,9 @@ const Product = () => {
 
    const getProduct = React.useCallback(async () => {
       try {
-         const productPromise = fetch(`https://hudy-tanvir.herokuapp.com/api/products/${slug}`)
+         const productPromise = fetch(`https://hudy-tanvir.onrender.com/api/products/${slug}`)
 
-         const relProductsPromise = fetch(`https://hudy-tanvir.herokuapp.com/api/products?tags=${tag}&fields=name,slug,price,image`)
+         const relProductsPromise = fetch(`https://hudy-tanvir.onrender.com/api/products?tags=${tag}&fields=name,slug,price,image`)
 
          const [productJson, relProductsJson] = await Promise.all([
             productPromise,

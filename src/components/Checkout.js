@@ -17,7 +17,7 @@ const Checkout = ({ total }) => {
 
    const handleCheckout = async () => {
       try {
-         const response = await fetch("https://hudy-tanvir.herokuapp.com/api/orders/checkout-session", {
+         const response = await fetch("https://hudy-tanvir.onrender.com/api/orders/checkout-session", {
             method: "POST",
             headers: {
                "Content-Type": "application/json",

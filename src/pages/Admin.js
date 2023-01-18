@@ -53,7 +53,7 @@ const Admin = () => {
 
          const response = await axios({
             method: 'POST',
-            url: 'https://hudy-tanvir.herokuapp.com/api/products',
+            url: 'https://hudy-tanvir.onrender.com/api/products',
             headers: {
                'Authorization': `Bearer ${localUser?.token}`
             },

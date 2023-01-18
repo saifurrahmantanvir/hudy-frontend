@@ -25,7 +25,7 @@ You can checkout the shop without login. Start shopping by creating an account(A
 8. Stripe Payment Gateway
 9. Pug
 
-**Checkout the API documentation at [https://hudy-tanvir.herokuapp.com](https://hudy-tanvir.herokuapp.com)**
+**Checkout the API documentation at [https://hudy-tanvir.onrender.com](https://hudy-tanvir.onrender.com)**
 
 Give it a shot
 

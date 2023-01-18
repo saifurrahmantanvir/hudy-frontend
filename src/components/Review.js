@@ -22,7 +22,7 @@ const Review = ({ reviews, id, slug }) => {
 
             if (!review) throw new Error('Empty review can\'t be submitted!')
 
-            const response = await fetch('https://hudy-tanvir.herokuapp.com/api/reviews', {
+            const response = await fetch('https://hudy-tanvir.onrender.com/api/reviews', {
                method: 'POST',
                headers: {
                   'Content-Type': 'application/json',

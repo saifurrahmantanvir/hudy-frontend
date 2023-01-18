@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const fetchUser = createAsyncThunk('user/fetchUser', async ({ email, password }) => {
    try {
-      const response = await fetch('https://hudy-tanvir.herokuapp.com/api/users/login', {
+      const response = await fetch('https://hudy-tanvir.onrender.com/api/users/login', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json'

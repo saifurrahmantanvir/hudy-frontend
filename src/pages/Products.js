@@ -31,7 +31,7 @@ const Products = () => {
          */
          const filter = size ? `&size=${size}` : '';
 
-         const response = await fetch(`https://hudy-tanvir.herokuapp.com/api/products?fields=name,slug,price,image&sort=${sort}${filter}`)
+         const response = await fetch(`https://hudy-tanvir.onrender.com/api/products?fields=name,slug,price,image&sort=${sort}${filter}`)
 
          const json = await response.json()
 
